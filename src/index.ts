@@ -1,6 +1,6 @@
 /** With specified extra nodes, the event will only fire
- * if the click was outside all of the nodes. */
-export const clickOutside = (node: HTMLElement, extraNodes?: HTMLElement[]): { destroy(): void } => {
+ * 	if the click was outside all of the nodes. */
+const clickOutside = (node: HTMLElement, extraNodes?: HTMLElement[]): { destroy(): void } => {
 	const handleClick = (event: MouseEvent) => {
 		let outsideExtraNodes = true;
 
@@ -26,3 +26,6 @@ export const clickOutside = (node: HTMLElement, extraNodes?: HTMLElement[]): { d
 		},
 	};
 };
+
+export default clickOutside;
+export { clickOutside };
